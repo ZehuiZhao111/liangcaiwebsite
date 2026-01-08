@@ -1,0 +1,1636 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>亮彩包装制品 | 专注不干胶标签印刷解决方案</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 基础样式与重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        :root {
+            --primary-color: #2A6EBB; /* 亮蓝色 - 专业信任 */
+            --secondary-color: #FF6B35; /* 橙色 - 活力行动 */
+            --accent-color: #00C897; /* 绿色 - 专业精准 */
+            --dark-color: #2C3E50;
+            --light-color: #F8F9FA;
+            --gray-color: #6C757D;
+            --border-radius: 8px;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 按钮样式 */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: #1a5ca3;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 15px rgba(42, 110, 187, 0.2);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #e05a2b;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        /* 顶部栏与导航 */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 26px;
+            color: var(--primary-color);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .logo span {
+            color: var(--secondary-color);
+        }
+        
+        /* 语言切换按钮样式 */
+        .language-switch-container {
+            margin-right: 20px;
+        }
+        
+        .language-switch {
+            background: none;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 8px 16px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .language-switch:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--dark-color);
+            cursor: pointer;
+        }
+        
+        /* 英雄区域 */
+        .hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                        url('https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h2 {
+            font-size: 3.2rem;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero h2 span {
+            color: var(--primary-color);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray-color);
+            margin-bottom: 35px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        /* 材料展示区 */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            color: var(--gray-color);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .materials {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .material-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .material-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .material-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .material-img {
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .material-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .material-card:hover .material-img img {
+            transform: scale(1.05);
+        }
+        
+        .material-info {
+            padding: 25px;
+        }
+        
+        .material-info h3 {
+            font-size: 1.4rem;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+        }
+        
+        .material-info p {
+            color: var(--gray-color);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .material-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .material-tag {
+            background-color: #e9f4ff;
+            color: var(--primary-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        /* 案例展示区 */
+        .cases {
+            padding: 100px 0;
+        }
+        
+        .case-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+        
+        .filter-btn {
+            padding: 10px 22px;
+            background-color: white;
+            border: 2px solid #eaeaea;
+            border-radius: 30px;
+            color: var(--gray-color);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        
+        .case-card {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            background-color: white;
+            transition: var(--transition);
+        }
+        
+        .case-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .case-img {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .case-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .case-card:hover .case-img img {
+            transform: scale(1.05);
+        }
+        
+        .case-info {
+            padding: 20px;
+        }
+        
+        .case-industry {
+            display: inline-block;
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .case-info h3 {
+            font-size: 1.3rem;
+            color: var(--dark-color);
+            margin-bottom: 12px;
+        }
+        
+        .case-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .case-detail {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--gray-color);
+        }
+        
+        .case-detail i {
+            margin-right: 5px;
+            color: var(--accent-color);
+        }
+        
+        /* 询价表单区域 */
+        .quote {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .quote-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .quote-content h2 {
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+        }
+        
+        .quote-content p {
+            color: var(--gray-color);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .features-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .features-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .features-list i {
+            color: var(--accent-color);
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+        
+        .quote-form {
+            background-color: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        /* 询价区域新样式 */
+.quote {
+    padding: 100px 0;
+    background-color: #f8f9fa;
+}
+
+.quote-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: stretch;
+}
+
+.qr-code-section {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--box-shadow);
+    height: 100%;
+}
+
+.qr-code-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.qr-code-wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+}
+
+.qr-code-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.qr-code-wrapper:hover .qr-code-img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.qr-code-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(42, 110, 187, 0.9);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.qr-code-wrapper:hover .qr-code-overlay {
+    opacity: 1;
+}
+
+.qr-code-overlay i {
+    color: white;
+    font-size: 2.5rem;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.qr-code-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qr-code-info h3 i {
+    color: #07C160; /* 微信绿色 */
+}
+
+.qr-tip {
+    font-size: 1.1rem;
+    color: var(--dark-color);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.qr-desc {
+    color: var(--gray-color);
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.qr-username {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f8f9fa;
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--secondary-color);
+}
+
+.qr-username i {
+    color: var(--secondary-color);
+}
+
+.qr-username span {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.contact-method:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), #1a5ca3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-icon i {
+    color: white;
+    font-size: 1.3rem;
+}
+
+.contact-details h4 {
+    color: var(--dark-color);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.contact-details p {
+    color: var(--gray-color);
+    font-size: 0.9rem;
+}
+
+.contact-info-section {
+    height: 100%;
+}
+
+.contact-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--box-shadow);
+    height: 100%;
+}
+
+.contact-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.contact-item-icon {
+    width: 50px;
+    height: 50px;
+    background: #f0f7ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-item-icon i {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.contact-item-content h4 {
+    color: var(--dark-color);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.contact-number, .contact-email {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.contact-time {
+    color: var(--gray-color);
+    font-size: 0.9rem;
+}
+
+.service-features {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid var(--secondary-color);
+}
+
+.service-features h4 {
+    color: var(--dark-color);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.service-features h4 i {
+    color: var(--accent-color);
+}
+
+.service-features ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.service-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--gray-color);
+    font-size: 0.95rem;
+}
+
+.service-features li i {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .quote-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .qr-code-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .service-features ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .qr-code-section,
+    .contact-card {
+        padding: 25px;
+    }
+    
+    .qr-code-wrapper {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .contact-method {
+        padding: 15px;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .contact-item-icon {
+        margin: 0 auto;
+    }
+}
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 16px;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(42, 110, 187, 0.1);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .file-upload {
+            border: 2px dashed #ddd;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .file-upload:hover {
+            border-color: var(--primary-color);
+            background-color: rgba(42, 110, 187, 0.02);
+        }
+        
+        .file-upload i {
+            font-size: 2.5rem;
+            color: var(--gray-color);
+            margin-bottom: 15px;
+        }
+        
+        /* 页脚 */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 70px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            color: white;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .contact-info {
+            list-style: none;
+        }
+        
+        .contact-info li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-info i {
+            color: var(--secondary-color);
+            margin-right: 12px;
+            margin-top: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #bbb;
+            font-size: 0.95rem;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 2.7rem;
+            }
+            
+            .quote-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 140px 0 80px;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            /* 移动端适配 */
+            .language-switch-container {
+                margin-right: 50px;
+            }
+            
+            .language-switch {
+                padding: 6px 12px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .material-grid, .case-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .case-filters {
+                gap: 8px;
+            }
+            
+            .filter-btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header>
+        <div class="header-container container">
+            <div class="logo">
+                <h1>无锡市亮彩<span>包装制品有限公司</span></h1>
+            </div>
+            <!-- <div class="language-switch-container">
+                <button class="language-switch" id="languageSwitch">
+                    <i class="fas fa-globe"></i> <span class="lang-text">EN</span>
+                </button>
+            </div> -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">公司介绍</a></li>
+                <li><a href="#materials">产品展示</a></li>
+                <li><a href="#cases">应用案例</a></li>
+                <li><a href="#quote" class="btn btn-secondary" style="color: white; width: 100px;">获取报价</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 首页英雄区域 -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2>专注 <span>不干胶标签</span> 印刷解决方案</h2>
+                <p>亮彩提供专业的不干胶标签定制服务，从设计到生产一站式解决。我们拥有先进的数码印刷设备、丰富的材料选择和完善的质量管理体系，确保每一张标签都完美呈现。</p>
+                <div class="hero-btns">
+                    <a href="#materials" class="btn">公司产品</a>
+                    <a href="#quote" class="btn btn-outline">立即询价</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品展示区 -->
+    <section class="materials" id="materials">
+        <div class="container">
+            <div class="section-title">
+                <h2>产品展示</h2>
+                <p>我们提供多种基材的不干胶材料，满足不同行业和应用场景的需求</p>
+            </div>
+            <div class="material-grid">
+                <!-- 材料卡片1 -->
+                <div class="material-card">
+                    <div class="material-img">
+                        <img src="https://s41.ax1x.com/2026/01/08/pZw1ls1.jpg" alt="铜版纸不干胶">
+                    </div>
+                    <div class="material-info">
+                        <h3>铜版纸不干胶</h3>
+                        <p>表面光滑，色彩还原度高，适合室内产品标签、食品标签等。</p>
+                        <div class="material-tags">
+                            <span class="material-tag">经济型</span>
+                            <span class="material-tag">高光泽</span>
+                        </div>
+                        <p><strong>适用场景：</strong>食品包装、日化产品、零售标签</p>
+                    </div>
+                </div>
+                
+                <!-- 材料卡片2 -->
+                <div class="material-card">
+                    <div class="material-img">
+                        <img src="https://s41.ax1x.com/2026/01/08/pZw8dbt.jpg" alt="哑银不干胶">
+                    </div>
+                    <div class="material-info">
+                        <h3>哑银不干胶</h3>
+                        <p>防水、防油、撕不烂，适合户外使用或特殊环境。</p>
+                        <div class="material-tags">
+                            <span class="material-tag">防水</span>
+                            <span class="material-tag">耐用</span>
+                        </div>
+                        <p><strong>适用场景：</strong>户外器械、化学品标签、物流标签</p>
+                    </div>
+                </div>
+                
+                <!-- 材料卡片3 -->
+                <div class="material-card">
+                    <div class="material-img">
+                        <img src="https://s41.ax1x.com/2026/01/08/pZwtFsJ.md.jpg" alt="PET不干胶">
+                    </div>
+                    <div class="material-info">
+                        <h3>PET不干胶</h3>
+                        <p>透明质感，呈现"无标签"视觉效果，提升产品档次。</p>
+                        <div class="material-tags">
+                            <span class="material-tag">透明</span>
+                            <span class="material-tag">高质感</span>
+                        </div>
+                        <p><strong>适用场景：</strong>化妆品瓶、高端酒瓶、电子产品</p>
+                    </div>
+                </div>
+                
+                <!-- 材料卡片4 -->
+                <div class="material-card">
+                    <div class="material-img">
+                        <img src="https://s41.ax1x.com/2026/01/08/pZwtkL9.md.jpg" alt="热敏纸不干胶">
+                    </div>
+                    <div class="material-info">
+                        <h3>热敏纸不干胶</h3>
+                        <p>无光表面，减少反光，适合需要长时间阅读的标签。</p>
+                        <div class="material-tags">
+                            <span class="material-tag">防反光</span>
+                            <span class="material-tag">书写友好</span>
+                        </div>
+                        <p><strong>适用场景：</strong>药品标签、工业标签、图书标签</p>
+                    </div>
+                </div>
+
+                 <!-- 材料卡片5 -->
+                 <div class="material-card">
+                    <div class="material-img">
+                        <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="防伪不干胶">
+                    </div>
+                    <div class="material-info">
+                        <h3>防伪不干胶</h3>
+                        <p>无光表面，减少反光，适合需要长时间阅读的标签。</p>
+                        <div class="material-tags">
+                            <span class="material-tag">防反光</span>
+                            <span class="material-tag">书写友好</span>
+                        </div>
+                        <p><strong>适用场景：</strong>药品标签、工业标签、图书标签</p>
+                    </div>
+                </div>
+
+                 <!-- 材料卡片6 -->
+                 <div class="material-card">
+                    <div class="material-img">
+                        <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="可移不干胶">
+                    </div>
+                    <div class="material-info">
+                        <h3>可移不干胶</h3>
+                        <p>无光表面，减少反光，适合需要长时间阅读的标签。</p>
+                        <div class="material-tags">
+                            <span class="material-tag">防反光</span>
+                            <span class="material-tag">书写友好</span>
+                        </div>
+                        <p><strong>适用场景：</strong>药品标签、工业标签、图书标签</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 应用案例展示区 -->
+    <section class="cases" id="cases">
+        <div class="container">
+            <div class="section-title">
+                <h2>应用案例</h2>
+                <p>我们为各行业提供专业的不干胶标签解决方案</p>
+            </div>
+            
+            <div class="case-filters">
+                <button class="filter-btn active" data-filter="all">全部案例</button>
+                <button class="filter-btn" data-filter="ele">电子电器</button>
+                <button class="filter-btn" data-filter="semi">半导体</button>
+                <button class="filter-btn" data-filter="med">医疗化工</button>
+                <button class="filter-btn" data-filter="ai">智能制造</button>
+                <button class="filter-btn" data-filter="food">食品日化</button>
+            </div>
+            
+            <div class="case-grid">
+                <!-- 案例卡片1 -->
+                <div class="case-card" data-category="ele">
+                    <div class="case-img">
+                        <img src="https://butter-baidu-note-sync.cdn.bcebos.com/2A83E527-E979-4BD6-A31A-E961286CC4AB.jpg@o_1,w_2000" alt="果汁瓶标签">
+                    </div>
+                    <div class="case-info">
+                        <span class="case-industry">电子电器</span>
+                        <h3>鲜榨果汁系列瓶贴</h3>
+                        <div class="case-details">
+                            <div class="case-detail">
+                                <i class="fas fa-tag"></i> 铜版纸+覆膜
+                            </div>
+                            <div class="case-detail">
+                                <i class="fas fa-palette"></i> 高清彩色印刷
+                            </div>
+                            <div class="case-detail">
+                                <i class="fas fa-cut"></i> 异形模切
+                            </div>
+                        </div>
+                        <p>为某果汁品牌设计的系列瓶贴，采用防水材料确保冷藏环境下不脱落。</p>
+                    </div>
+                </div>
+                
+                <!-- 案例卡片2 -->
+                <div class="case-card" data-category="semi">
+                    <div class="case-img">
+                        <img src="https://img2.baidu.com/it/u=2893113053,457949457&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" alt="化妆品标签">
+                    </div>
+                    <div class="case-info">
+                        <span class="case-industry">半导体</span>
+                        <h3>高端护肤品牌标签</h3>
+                        <div class="case-details">
+                            <div class="case-detail">
+                                <i class="fas fa-tag"></i> PET透明材料
+                            </div>
+                            <div class="case-detail">
+                                <i class="fas fa-palette"></i> 烫金+丝印
+                            </div>
+                            <div class="case-detail">
+                                <i class="fas fa-cut"></i> 精密模切
+                            </div>
+                        </div>
+                        <p>为护肤品设计的透明标签，呈现"无标签"视觉效果，提升产品档次。</p>
+                    </div>
+                </div>
+                
+                <!-- 案例卡片3 -->
+                <div class="case-card" data-category="med">
+                    <div class="case-img">
+                        <img src="https://t10.baidu.com/it/u=517790275,3330212010&fm=199&app=68&f=JPEG?w=750&h=750&s=F0338F74494F734F1EA7D9460300F0EB" alt="药品标签">
+                    </div>
+                    <div class="case-info">
+                        <span class="case-industry">医疗化工</span>
+                        <h3>药品信息标签</h3>
+                        <div class="case-details">
+                            <div class="case-detail">
+                                <i class="fas fa-tag"></i> 哑光纸
+                            </div>
+                            <div class="case-detail">
+                                <i class="fas fa-palette"></i> 单色/双色印刷
+                            </div>
+                            <div class="case-detail">
+                                <i class="fas fa-barcode"></i> 条码打印
+                            </div>
+                        </div>
+                        <p>符合医药行业规范的标签，确保信息清晰可读，条码扫描准确。</p>
+                    </div>
+                </div>
+                
+                <!-- 案例卡片4 -->
+                <div class="case-card" data-category="ai">
+                    <div class="case-img">
+                        <img src="https://img.diytrade.com/smimg/2938822/49318964-11534771-0/nn/5dde.jpg" alt="工业标签">
+                    </div>
+                    <div class="case-info">
+                        <span class="case-industry">智能制造</span>
+                        <h3>耐候性器械标签</h3>
+                        <div class="case-details">
+                            <div class="case-detail">
+                                <i class="fas fa-tag"></i> 合成纸
+                            </div>
+                            <div class="case-detail">
+                                <i class="fas fa-palette"></i> 耐候油墨
+                            </div>
+                            <div class="case-detail">
+                                <i class="fas fa-temperature-high"></i> 耐高温
+                            </div>
+                        </div>
+                        <p>为户外机械设备设计的标签，耐受极端温度、油污和紫外线。</p>
+                    </div>
+                </div>
+
+                 <!-- 案例卡片5 -->
+                 <div class="case-card" data-category="food">
+                    <div class="case-img">
+                        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fcbu01.alicdn.com%2Fimg%2Fibank%2F2020%2F727%2F000%2F22580000727_385160942.jpg&refer=http%3A%2F%2Fcbu01.alicdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1769153314&t=fedeb640afa4d80a0c529538b7c930a6" alt="工业标签">
+                    </div>
+                    <div class="case-info">
+                        <span class="case-industry">食品日化</span>
+                        <h3>耐候性器械标签</h3>
+                        <div class="case-details">
+                            <div class="case-detail">
+                                <i class="fas fa-tag"></i> 合成纸
+                            </div>
+                            <div class="case-detail">
+                                <i class="fas fa-palette"></i> 耐候油墨
+                            </div>
+                            <div class="case-detail">
+                                <i class="fas fa-temperature-high"></i> 耐高温
+                            </div>
+                        </div>
+                        <p>为户外机械设备设计的标签，耐受极端温度、油污和紫外线。</p>
+                    </div>
+                </div>
+
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- 在线询价区域 -->
+    <!-- <section class="quote" id="quote">
+        <div class="container">
+            <div class="quote-container">
+                <div class="quote-content">
+                    <h2>获取专属报价</h2>
+                    <p>请填写以下信息，我们的专业客服将在1小时内为您提供详细报价和生产建议。支持小批量定制，最快24小时出货。</p>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i> 免费设计稿审核与优化建议</li>
+                        <li><i class="fas fa-check-circle"></i> 免费提供样品（前3次）</li>
+                        <li><i class="fas fa-check-circle"></i> 精准报价，无隐藏费用</li>
+                        <li><i class="fas fa-check-circle"></i> 专业色彩管理，确保印刷一致</li>
+                    </ul>
+                    
+                    <div class="contact-info">
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>咨询热线</h4>
+                                <p>133-95111-883/宋女士</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>电子邮箱</h4>
+                                <p>songxindi1971@126.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section> -->
+
+    <!-- 在线询价区域 -->
+<section class="quote" id="quote">
+    <div class="container">
+        <div class="section-title">
+            <h2>立即咨询获取报价</h2>
+            <p>扫描微信二维码，专业客服一对一为您服务</p>
+        </div>
+        
+        <div class="quote-container">
+            <div class="quote-content">
+                <div class="qr-code-section">
+                    <div class="qr-code-container">
+                        <div class="qr-code-wrapper">
+                            <!-- 这里替换为您实际的微信二维码图片 -->
+                            <img src="https://i.postimg.cc/Gtk1kWdf/IMG-6307.jpg" 
+                                 alt="微信客服二维码" 
+                                 class="qr-code-img">
+                            <div class="qr-code-valid">
+                                <i class="fas fa-check-circle"></i>
+                                <span>永久有效</span>
+                            </div>
+                        </div>
+                        <div class="qr-code-info">
+                            <h3><i class="fab fa-weixin"></i> 微信客服</h3>
+                            <p class="qr-tip">扫码添加客服微信</p>
+                            <p class="qr-desc">一对一专业咨询，快速获取报价</p>
+                            <div class="qr-username">
+                                <i class="fas fa-user"></i>
+                                <span>客服微信号：WuxiLiangcai</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>在线沟通</h4>
+                                <p>添加微信后直接沟通需求，快速响应</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-file-upload"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>文件传输</h4>
+                                <p>通过微信直接发送设计文件，方便快捷</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>实时报价</h4>
+                                <p>收到文件后30分钟内提供详细报价</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-info-section">
+                <div class="contact-card">
+                    <h3><i class="fas fa-headset"></i> 其他联系方式</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>咨询热线</h4>
+                            <p class="contact-number">133-95111-883</p>
+                            <p class="contact-time">工作日 8:00-18:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>电子邮箱</h4>
+                            <p class="contact-email">songxindi1972@126.com</p>
+                            <p class="contact-time">24小时内回复</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>公司地址</h4>
+                            <p>江苏省无锡市锡山区春笋中路38号</p>
+                            <p class="contact-time">欢迎实地考察</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-features">
+                        <h4><i class="fas fa-check-circle"></i> 服务承诺</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> 免费设计稿审核</li>
+                            <li><i class="fas fa-check"></i> 免费提供样品</li>
+                            <li><i class="fas fa-check"></i> 精准报价无隐藏</li>
+                            <li><i class="fas fa-check"></i> 最快24小时出货</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>无锡市亮彩包装制品有限公司</h3>
+                    <p>专注不干胶标签印刷解决方案，从设计到生产一站式服务，为各行业客户提供高质量的标签产品。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">公司介绍</a></li>
+                        <li><a href="#materials">产品展示</a></li>
+                        <li><a href="#cases">应用案例</a></li>
+                        <li><a href="#quote">获取报价</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>联系方式</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>地址</strong>
+                                <p>江苏省无锡市锡山区春笋中路38号</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>电话</strong>
+                                <p>133-95111-883</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>邮箱</strong>
+                                <p>songxindi1972@126.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2023 亮彩包装制品有限公司 版权所有</p>
+            </div>
+        </div>
+    </footer>
+ <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+
+            // 移动端菜单切换
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    this.innerHTML = navLinks.classList.contains('active') 
+                        ? '<i class="fas fa-times"></i>' 
+                        : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // 文件上传功能
+            const fileUpload = document.getElementById('fileUpload');
+            const fileInput = document.getElementById('fileInput');
+            
+            if (fileUpload && fileInput) {
+                fileUpload.addEventListener('click', function() {
+                    fileInput.click();
+                });
+                
+                fileInput.addEventListener('change', function() {
+                    if (this.files.length > 0) {
+                        const fileName = this.files[0].name;
+                        fileUpload.innerHTML = `
+                            <i class="fas fa-check-circle" style="color:var(--accent-color)"></i>
+                            <p>${currentLang === 'zh' ? '已选择文件: ' : 'Selected file: '}${fileName}</p>
+                            <p style="font-size:0.9rem;color:#888;">${currentLang === 'zh' ? '点击可重新选择' : 'Click to reselect'}</p>
+                        `;
+                    }
+                });
+            }
+
+            // 表单提交
+            const quoteForm = document.getElementById('quoteForm');
+            if (quoteForm) {
+                quoteForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert(currentLang === 'zh' ? '询价请求已提交，我们将尽快联系您！' : 'Quote request submitted, we will contact you soon!');
+                    this.reset();
+                    // 重置文件上传区域
+                    if (fileUpload) {
+                        fileUpload.innerHTML = `
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>${currentLang === 'zh' ? '点击或将文件拖拽到这里上传' : 'Click or drag files here to upload'}</p>
+                            <p style="font-size:0.9rem;color:#888;">${currentLang === 'zh' ? '支持AI、CDR、PDF、JPG格式，最大20MB' : 'Supports AI, CDR, PDF, JPG format, maximum 20MB'}</p>
+                        `;
+                    }
+                });
+            }
+
+            // 案例筛选功能
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const caseCards = document.querySelectorAll('.case-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // 移除所有按钮的active类
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // 给当前点击的按钮添加active类
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    caseCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+    
+</body>
+</html>
